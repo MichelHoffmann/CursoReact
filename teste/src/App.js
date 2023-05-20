@@ -4,32 +4,35 @@ import { Component } from "react";
 
 class App extends Component {
   state = {
-    name: "Michel Hoffmann",
-  };
-
-  stateClick = () => {
-    if (this.state.name === "Fui clicado")
-      this.setState({ name: "Michel Hoffmann" });
-    if (this.state.name === "Michel Hoffmann")
-      this.setState({ name: "Fui clicado" });
+    posts: [
+      {
+        id: 1,
+        title: "Titulo 1",
+        body: "Corpo 1",
+      },
+      {
+        id: 2,
+        title: "Titulo 2",
+        body: "Corpo 2",
+      },
+      {
+        id: 3,
+        title: "Titulo 3",
+        body: "Corpo 3",
+      },
+    ],
   };
 
   render() {
-    const { name } = this.state;
+    const { posts } = this.state;
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 onClick={this.stateClick}>{name}</h1>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
+        {posts.map((post) => (
+          <div key={post.id}>
+            <h1>{post.title}</h1>
+            <p>{post.body}</p>
+          </div>
+        ))}
       </div>
     );
   }
