@@ -1,13 +1,18 @@
 import logo from "./logo.svg";
 import "./App.css";
 
-function App() {
-  return (
-    <div className="App">
+export default class App {
+  state = {
+    name: 'Michel'
+  }
+
+  render (
+    return(
+      <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
-          Edit <code>src/App.js</code> and save to reload.
+          Olá, eu sou o !
         </p>
         <a
           className="App-link"
@@ -15,11 +20,20 @@ function App() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Learn React
+          Este é um link
         </a>
       </header>
     </div>
+    )
   );
 }
 
-export default App;
+// function App() {
+//   state = {
+//     name: 'Michel'
+//   }
+
+  
+// }
+
+// export default App;
