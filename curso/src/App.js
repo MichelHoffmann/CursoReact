@@ -37,16 +37,16 @@ class App extends Component {
   render() {
     const { posts } = this.state;
     return (
-      <div className="App">
-        <header className="App-header">
+      <div className="container">
+        <div className="posts">
           {posts.map((post) => (
-            <div key={post.id}>
+            <div key={post.id} className="post">
               <h2>{post.title}</h2>
               <p>{post.body}</p>
               <hr />
             </div>
           ))}
-        </header>
+        </div>
       </div>
     );
   }
