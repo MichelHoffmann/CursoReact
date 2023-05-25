@@ -10,3 +10,7 @@
   flex: flex-end;
   margin-top: 25px;
 }
+
+.search-container, .search-container h1 {
+  margin-bottom: 30px;
+}
